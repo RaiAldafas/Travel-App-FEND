@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Travel app</title>
+  <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+<link href="main.33573689e08de96e78cc.css" rel="stylesheet"></head>
+
+<body>
+
+  <div id="app">
+    <img id="background" src="" alt="">
+    <header class="title">
+      Travel Planner
+    </header>
+    <div class="container">
+      <form id="form">
+        <label for="Destination">where are you going?</label>
+        <input id="Destination" type="text" name="input" placeholder="Your destination">
+        <label for="chick-in">Chick in</label>
+        <input type="date" id="start" name="trip-start" value="0000-00-00" min="2020-01-01" max="2022-12-31">
+        <label for="chick-out">Chick out</label>
+        <input type="date" id="end" name="trip-end" value="0000-00-00" min="2020-01-01" max="2022-12-31">
+        <button id="check" type="submit"> check </button>
+      </form>
+      <div id="trip_info">
+        <div class="your-trip">
+          <div id="city"></div>
+          <div id="duration-text"></div>
+          <div id="duration"></div>
+          <div id="description-text"></div>
+          <div id="description"></div>
+          <div id="temp-text"></div>
+          <div id="temp"></div>
+          <div id="snow-text"></div>
+          <div id="snow"></div>
+          <div id="img-style">
+          <img id="img" src="" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+      })
+    }
+  </script>
+
+<script type="text/javascript" src="main.js"></script></body>
+
+</html>
